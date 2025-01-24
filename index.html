@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Kullanıcı Arama</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="search-container">
+            <h1><span class="search-icon">🔍</span> Discord Kullanıcı Arama</h1>
+            <div class="disclaimer">
+                <span class="info-icon">ℹ️</span>
+                <span>Bu site Discord ile ilişkili değildir.</span>
+            </div>
+            <div class="input-group">
+                <label for="userId">Kullanıcı ID:</label>
+                <input type="text" id="userId" placeholder="Discord kullanıcı ID'sini girin">
+                <button id="lookupBtn">Ara</button>
+            </div>
+        </div>
+
+        <div class="result-container" style="display: none;">
+            <div class="user-card">
+                <div class="user-avatar">
+                    <img id="userAvatar" src="" alt="Kullanıcı Avatarı">
+                </div>
+                <div class="user-info">
+                    <div class="info-row">
+                        <span class="label">👤 Kullanıcı ID:</span>
+                        <span id="displayUserId" class="value"></span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label"># Kullanıcı Adı:</span>
+                        <span id="username" class="value"></span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">🏆 Rozetler:</span>
+                        <span id="badges" class="value"></span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">📅 Oluşturulma:</span>
+                        <span id="created" class="value"></span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">🎨 Banner Rengi:</span>
+                        <div id="bannerColor" class="color-box"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,252 @@
+:root {
+    --bg-color: #1e2124;
+    --card-bg: #2c2f33;
+    --text-color: #ffffff;
+    --accent-color: #7289da;
+    --hover-color: #677bc4;
+    --input-bg: #40444b;
+    --secondary-text: #b9bbbe;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 20px;
+    flex: 1;
+}
+
+.search-container {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.search-icon {
+    font-size: 2rem;
+}
+
+.disclaimer {
+    background-color: var(--card-bg);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.learn-more {
+    color: var(--accent-color);
+    text-decoration: none;
+    margin-left: 0.5rem;
+}
+
+.learn-more:hover {
+    text-decoration: underline;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+label {
+    text-align: left;
+    color: var(--secondary-text);
+}
+
+input {
+    padding: 1rem;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+button {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--accent-color);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: var(--hover-color);
+}
+
+.result-container {
+    margin-top: 2rem;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.user-card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+    animation: fadeIn 0.3s ease-in-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.user-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.user-avatar {
+    flex-shrink: 0;
+}
+
+.user-avatar img {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-info {
+    flex-grow: 1;
+}
+
+.info-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+.label {
+    color: var(--secondary-text);
+    min-width: 120px;
+}
+
+.value {
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.color-box {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    border: 2px solid var(--secondary-text);
+}
+
+footer {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    text-align: center;
+    margin-top: auto;
+}
+
+.donate-btn {
+    margin-top: 1rem;
+    background-color: #5865f2;
+}
+
+.donate-btn:hover {
+    background-color: #4752c4;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 0.8s linear infinite;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+input:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Toast Customization */
+.toastify {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+
+/* Hover Effects */
+button:not(:disabled):hover {
+    transform: translateY(-1px);
+    transition: transform 0.2s ease;
+}
+
+button:not(:disabled):active {
+    transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+    .user-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .info-row {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .label {
+        min-width: auto;
+    }
+}
