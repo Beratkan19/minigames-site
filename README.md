@@ -12,12 +12,6 @@ Bu site, Discord kullanıcı ID'leri ile kullanıcı bilgilerini görüntülemen
 - Karanlık tema
 - Duyarlı tasarım
 
-## Kurulum
-
-1. Bu depoyu klonlayın
-2. `script.js` dosyasında `YOUR_BOT_TOKEN_HERE` kısmını kendi Discord Bot Token'ınız ile değiştirin
-3. GitHub Pages üzerinden yayınlayın
-
 ## Kullanım
 
 1. Siteye gidin
@@ -26,4 +20,4 @@ Bu site, Discord kullanıcı ID'leri ile kullanıcı bilgilerini görüntülemen
 
 ## Lisans
 
-MIT
+__*`Beratkan15 Tarafından Yapılmıştır`*__
